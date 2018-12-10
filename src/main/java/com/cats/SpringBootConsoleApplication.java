@@ -35,11 +35,11 @@ public class SpringBootConsoleApplication implements CommandLineRunner {
 
         if (args.length > 0 ) {
         	if(catsAutomation.getMessage(args[0].toString()).equalsIgnoreCase("CREATE")) {
-        		System.out.println("Running CREATE Query on " + catsAutomation.getMessage(args[1].toString()));
-        		read.readExcelData(catsAutomation.getMessage(args[1].toString()));
+        		System.out.println("Running CREATE Query on " + catsAutomation.getMessage(args[1].toString()) +" for user : " + catsAutomation.getMessage(args[2].toString()));
+        		read.readExcelData(catsAutomation.getMessage(args[1].toString()),catsAutomation.getMessage(args[2].toString()));
         		
         	}else if (catsAutomation.getMessage(args[0].toString()).equalsIgnoreCase("UPDATE")){
-        		System.out.println("Running UPDATE Query on " + catsAutomation.getMessage(args[1].toString()));
+        		System.out.println("Running UPDATE Query on " + catsAutomation.getMessage(args[1].toString()) +" for user : " + catsAutomation.getMessage(args[2].toString()));
         	}
         }else{
             System.out.println("Please Enter Valid Argument");
