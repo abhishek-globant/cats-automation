@@ -1,4 +1,4 @@
-package com.cats.excel.read;
+package com.cats.data;
 
 
 public class Candidate {
